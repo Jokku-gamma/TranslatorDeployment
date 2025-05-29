@@ -1,0 +1,13 @@
+# whisper_model/conda_whisper.yml
+name: whisper-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - openai-whisper
+    - torch
+    - torchaudio
+    - ffmpeg-python
+    - azureml-defaults
