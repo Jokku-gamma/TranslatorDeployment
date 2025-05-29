@@ -1,0 +1,12 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: whisper-deployment
+endpoint_name: whisper-endpoint
+model:
+  path: ./whisper_model
+code_configuration:
+  code: ./whisper_model
+  scoring_script: score_whisper.py
+environment:
+  conda_file: ./whisper_model/conda_whisper.yml
+instance_type: Standard_DS3_v2
+instance_count: 1
