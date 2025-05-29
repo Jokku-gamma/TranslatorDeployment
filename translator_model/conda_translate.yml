@@ -1,0 +1,12 @@
+name: translate-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - transformers
+    - torch
+    - sentencepiece
+    - protobuf
+    - azureml-defaults
