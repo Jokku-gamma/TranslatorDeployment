@@ -1,0 +1,12 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: translator-deployment
+endpoint_name: whisper-endpoint  # Same endpoint as Whisper
+model:
+  path: ./translator_model
+code_configuration:
+  code: ./translator_model
+  scoring_script: score_translate.py
+environment:
+  conda_file: ./translator_model/conda_translate.yml
+instance_type: Standard_DS3_v2
+instance_count: 1
